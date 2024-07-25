@@ -9,36 +9,67 @@ const perguntas = [
     {
         enunciado: "Qual é o nome da primeira vítima de william afton?",
         Altenativas: [
-            "Charlie",
-            "Elizabeth"
+            {
+                texto: "Charlie",
+                afirmacao: "afirmacao"
+            },
+            {
+                texto: "Elizabeth"
+                afirmacao: "afirmacao"
+            }
+
         ]
     },
     {
         enunciado: "O'Que Frisk tem de mais?",
         Altenativas: [
-            "Determinação",
-            "Vontade genocida"
+            {
+                texto: "Determinacao",
+                afirmacao: "afirmacao"
+            },
+            {
+                texto: "Vontade genocida"
+                afirmacao: "afirmacao"
+            }
         ]
     },
     {
         enunciado: "Aonde o sonic apareceu pela primeira vez?",
         Altenativas: [
-            "Num jogo de corrida",
-            "No próprio jogo dele"
+            {
+                texto: "Num jogo de corrida",
+                afirmacao: "afirmacao"
+            },
+            {
+                texto: "No próprio jogo dele"
+                afirmacao: "afirmacao"
+            }
+
         ]
     },
     {
         enunciado: "Em que ano acontece os evento do filme Godzilla:destroy all monsters",
         Altenativas: [
-            "1999",
-            "1968"
+            {
+                texto: "1968",
+                afirmacao: "afirmacao"
+            },
+            {
+                texto: "1999"
+                afirmacao: "afirmacao"
+            }
         ]
     },
     {
         enunciado: "Jurassic Park foi revolucionário, pois ele utilizou...",
-        Altenativas: [
-            "Uma computação gráfica incrivel",
-            "Usou robôs gigantes de dinossauros"
+        Altenativas: [{
+            texto: "Usou robôs gigantes de dinossauros",
+            afirmacao: "afirmacao"
+        },
+        {
+            texto: "Uma computação gráfica incrivel"
+            afirmacao: "afirmacao"
+        }
         ]
     },
 ];
@@ -54,10 +85,14 @@ function mostrePergunta() {
     msotreAlternativas();
 }
 
-function msotreAlternativas(){
-    for(const alternativas of perguntaAtual.alternativas){
+function msotreAlternativas() {
+    for (const alternativas of perguntaAtual.alternativas) {
         const botaoAlternativas = decument.createElement("button")
-        botaoAlternativas.textContent = alternativas;
+        botaoAlternativas.textContent = alternativas.texto;
+        botaoAlternativas.addEventListener("click", (){
+            atual++;
+            mostrePergunta();
+        })
         caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
