@@ -77,24 +77,38 @@ const perguntas = [
 
 let atual = 0;
 let perguntaAtual;
-
+let resultadoFinal = "";
 
 function mostrePergunta() {
+    if(atual >= perguntas.lenght){
+        mostraResultado();
+        return;
+    }
     perguntaAtual = perguntas[atual];
     caixaPerguntas.textContent = perguntaAtual.enunciado
-    msotreAlternativas();
+    caixaAlternativas.textContent = "";
+    mostreAlternativas();
 }
 
-function msotreAlternativas() {
-    for (const alternativas of perguntaAtual.alternativas) {
-        const botaoAlternativas = decument.createElement("button")
+function mostreAlternativas() {
+    for(const alternativas of perguntaAtual.alternativas){
+        const botaoAlternativas = document.createElement("button");
         botaoAlternativas.textContent = alternativas.texto;
-        botaoAlternativas.addEventListener("click", (){
-            atual++;
-            mostrePergunta();
-        })
+        botaoAlternativas.addEventListener("click", () => respostaSelecionada(alternativas))
         caixaAlternativas.appendChild(botaoAlternativas);
     }
+}
+function respostaSelecionada(opçãoSelecionada){
+    const afirmacoes = opçãoSelecionada.afirmacoes;
+    resultadoFinal = afirmacoes;
+    atual++;
+    mostrePergunta();
+
+}
+
+function mostraResultado(){
+    caixaPerguntas.textContent = "Você arcetou...";
+    
 }
 
 mostrePergunta();
