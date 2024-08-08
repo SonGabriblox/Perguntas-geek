@@ -7,68 +7,68 @@ const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
     {
-        enunciado: "Qual é o nome da primeira vítima de william afton?",
+        enunciado: "1(Qual é o nome da primeira vítima de william afton?",
         Altenativas: [
             {
                 texto: "Charlie",
-                afirmacao: "afirmacao"
+                afirmacao: "1(acertou"
             },
             {
                 texto: "Elizabeth"
-                afirmacao: "afirmacao"
+                afirmacao: "1(errou"
             }
 
         ]
     },
     {
-        enunciado: "O'Que Frisk tem de mais?",
+        enunciado: "2(O'Que Frisk tem de mais?",
         Altenativas: [
             {
                 texto: "Determinacao",
-                afirmacao: "afirmacao"
+                afirmacao: "2(acertou"
             },
             {
                 texto: "Vontade genocida"
-                afirmacao: "afirmacao"
+                afirmacao: "2(errou"
             }
         ]
     },
     {
-        enunciado: "Aonde o sonic apareceu pela primeira vez?",
+        enunciado: "3(Aonde o sonic apareceu pela primeira vez?",
         Altenativas: [
             {
-                texto: "Num jogo de corrida",
+                texto: "3(acertou",
                 afirmacao: "afirmacao"
             },
             {
                 texto: "No próprio jogo dele"
-                afirmacao: "afirmacao"
+                afirmacao: "3(errou"
             }
 
         ]
     },
     {
-        enunciado: "Em que ano acontece os evento do filme Godzilla:destroy all monsters",
+        enunciado: "4(Em que ano acontece os evento do filme Godzilla:destroy all monsters",
         Altenativas: [
             {
-                texto: "1968",
+                texto: "4(errou",
                 afirmacao: "afirmacao"
             },
             {
                 texto: "1999"
-                afirmacao: "afirmacao"
+                afirmacao: "4(acertou"
             }
         ]
     },
     {
-        enunciado: "Jurassic Park foi revolucionário, pois ele utilizou...",
+        enunciado: "5(Jurassic Park foi revolucionário, pois ele utilizou...",
         Altenativas: [{
             texto: "Usou robôs gigantes de dinossauros",
-            afirmacao: "afirmacao"
+            afirmacao: "5(errou"
         },
         {
             texto: "Uma computação gráfica incrivel"
-            afirmacao: "afirmacao"
+            afirmacao: "5(acertou"
         }
         ]
     },
@@ -100,7 +100,7 @@ function mostreAlternativas() {
 }
 function respostaSelecionada(opçãoSelecionada){
     const afirmacoes = opçãoSelecionada.afirmacoes;
-    resultadoFinal = afirmacoes;
+    resultadoFinal += afirmacoes + " ";
     atual++;
     mostrePergunta();
 
@@ -108,7 +108,8 @@ function respostaSelecionada(opçãoSelecionada){
 
 function mostraResultado(){
     caixaPerguntas.textContent = "Você arcetou...";
-    
+    textoResultado.textContent = resultadoFinal;
+    caixaAlternativas.textContent = "";
 }
 
 mostrePergunta();
