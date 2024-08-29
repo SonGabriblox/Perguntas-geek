@@ -11,11 +11,15 @@ const perguntas = [
         Altenativas: [
             {
                 texto: "Charlie",
-                afirmacao: "1(acertou"
+                afirmacao: ["1(acertou",
+                    "1(Você arcetou :)"
+                ]
             },
             {
                 texto: "Elizabeth"
-                afirmacao: "1(errou"
+                afirmacao: ["1(errou",
+                    "1(você errou :("
+                ]
             }
 
         ]
@@ -25,11 +29,15 @@ const perguntas = [
         Altenativas: [
             {
                 texto: "Determinacao",
-                afirmacao: "2(acertou"
+                afirmacao: ["2(acertou",
+                    "2(Você arcetou :)"
+                ]
             },
             {
                 texto: "Vontade genocida"
-                afirmacao: "2(errou"
+                afirmacao: ["2(errou",
+                   "2(você errou :("
+                ]
             }
         ]
     },
@@ -37,12 +45,16 @@ const perguntas = [
         enunciado: "3(Aonde o sonic apareceu pela primeira vez?",
         Altenativas: [
             {
-                texto: "3(acertou",
-                afirmacao: "afirmacao"
+                texto: "Num jogo de corrida",
+                afirmacao: ["3(acertou",
+                    "3(Você acertou :)"
+                ]
             },
             {
                 texto: "No próprio jogo dele"
-                afirmacao: "3(errou"
+                afirmacao: ["3(errou",
+                    "3(Você errou :("
+                ]
             }
 
         ]
@@ -51,12 +63,16 @@ const perguntas = [
         enunciado: "4(Em que ano acontece os evento do filme Godzilla:destroy all monsters",
         Altenativas: [
             {
-                texto: "4(errou",
-                afirmacao: "afirmacao"
+                texto: "1964",
+                afirmacao: ["4(errou",
+                    "4(Você errou :("
+                ]
             },
             {
                 texto: "1999"
-                afirmacao: "4(acertou"
+                afirmacao: ["4(acertou",
+                    "4(Você acertou :)"
+                ]
             }
         ]
     },
@@ -64,11 +80,15 @@ const perguntas = [
         enunciado: "5(Jurassic Park foi revolucionário, pois ele utilizou...",
         Altenativas: [{
             texto: "Usou robôs gigantes de dinossauros",
-            afirmacao: "5(errou"
+            afirmacao: ["5(errou",
+              "5(Você errou :("  
+            ]
         },
         {
             texto: "Uma computação gráfica incrivel"
-            afirmacao: "5(acertou"
+            afirmacao: ["5(acertou",
+                "5(Você acertou :)"
+            ]
         }
         ]
     },
