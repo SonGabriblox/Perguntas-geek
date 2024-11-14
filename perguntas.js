@@ -117,17 +117,16 @@ export const perguntas = [
         enunciado: "quais eram os mascotes das empresas que tavam fazendo a guerra dos video games do anos 90?",
         alternativas: [
             {
-                texto: "",
+                texto: "sonic e mario",
                 afirmacao: [
-                    "Vem impulsionando a inovação na área de IA e luta para abrir novos caminhos profissionais com IA.",
+                    "7° = certa",
                 ],
                 proxima: 7,
             },
             {
-                texto: "Me preocupo com as pessoas que perderão seus empregos para máquinas e defendem a importância de proteger os trabalhadores.",
+                texto: "tetris e pacmam",
                 afirmacao: [
                     "Sua preocupação com as pessoas motivou a criar um grupo de estudos entre trabalhadores para discutir meios de utilização de IA de forma ética.",
-                    "Criou grupos de ética voltado para IA e busca ativamente reduzir as desigualdades geradas pela automação."
                 ],
                 proxima: 7,
             },
